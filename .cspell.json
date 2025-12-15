@@ -1,5 +1,5 @@
 {
     "ignorePaths": ["go.mod", "go.sum"],
     "language": "en,pt-br",
-    "words": ["github", "textfmt"]
+    "words": ["github", "GOARCH", "ldflags", "linux", "textfmt"]
 }
