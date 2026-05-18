@@ -11,14 +11,13 @@ import (
 
 func main() {
 	version := version.GetVersion()
-	tag, err := runOutput("git", "describe", "--tags", "--abbrev=0")
-	if err != nil {
-		panic(err)
-	}
+	// ignore error: may fail on first release when there are no tags yet,
+	// any real errors will surface in the next git command
+	tag, _ := runOutput("git", "describe", "--tags", "--abbrev=0")
 	if strings.TrimSpace(string(tag)) == version {
 		return
 	}
-	err = run("git", "add", "internal/version/version.txt")
+	err := run("git", "add", "internal/version/version.txt")
 	if err != nil {
 		panic(err)
 	}
