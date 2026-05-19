@@ -5,6 +5,5 @@ mkShell {
     git
     gnumake
     go
-    pkgsCross.mingwW64.stdenv.cc
   ];
 }
