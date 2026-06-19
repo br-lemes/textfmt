@@ -8,7 +8,7 @@ ifeq ($(TARGET),)
 endif
 
 ARTIFACTS := $(foreach p,$(PLATFORMS),\
-    $(TARGET)-$(p)$(if $(filter windows%,$(p)),.exe))
+	$(TARGET)-$(p)$(if $(filter windows%,$(p)),.exe))
 
 SEMVER := github.com/br-lemes/semver@latest
 
