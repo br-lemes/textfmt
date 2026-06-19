@@ -90,7 +90,7 @@ func TestExecute(t *testing.T) {
 			}
 
 			rootCmd.SetArgs(tt.args)
-			err := Execute()
+			err := rootCmd.Execute()
 			gotOut := outBuf.String()
 
 			if tt.wantErr {

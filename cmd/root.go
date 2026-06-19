@@ -5,7 +5,6 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/br-lemes/textfmt/internal/version"
 	"github.com/spf13/cobra"
 )
 
@@ -27,12 +26,12 @@ Multiple formatting options can be applied simultaneously.`,
 	RunE: runTextfmt,
 }
 
-func Execute() error {
+func Execute(version string) error {
+	rootCmd.Version = version
 	return rootCmd.Execute()
 }
 
 func init() {
-	rootCmd.Version = version.GetVersion()
 	rootCmd.Flags().
 		BoolVar(&chars, "chars", false, "Count characters in text")
 	rootCmd.Flags().
