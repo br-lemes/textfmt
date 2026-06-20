@@ -1,19 +1,12 @@
 {
     "ignorePaths": ["go.mod", "go.sum"],
-    "language": "en,pt-br",
+    "language": "en",
     "words": [
         "github",
-        "gnumake",
         "GOARCH",
         "ldflags",
         "lemes",
         "linux",
-        "NIXOS",
-        "nixpkgs",
-        "patchelf",
-        "pkgsCross",
-        "rpath",
-        "stdenv",
         "textfmt"
     ]
 }
